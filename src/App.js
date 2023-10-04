@@ -1,7 +1,7 @@
 import './App.css';
 
 function App() {
-  const arr = [
+  const drumPads = [
     {
       keyCode: 81,
       text: "Q",
@@ -54,6 +54,13 @@ function App() {
     <div className="App">
     <div id='drum-machine'>
       <div id="display"></div>
+      <div className='drum-pads'>
+        {drumPads.map((drumPad) =>
+          <div className='drum-pad' id={drumPad.text}>
+            {drumPad.text}
+          </div>
+        )}
+      </div>
     </div>
     </div>
   );
